@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BigWhiteThing</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      background: url("https://iili.io/KnkmASj.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: rgba(20, 20, 40, 0.55);
+      border-radius: 15px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .profile {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #6a5acd;
+    }
+
+    .profile h1 {
+      margin: 10px 0 5px;
+      font-size: 2rem;
+    }
+
+    .profile p {
+      font-size: 1rem;
+      opacity: 0.85;
+    }
+
+    .links a {
+      margin: 0 10px;
+      color: #bbb;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .links a:hover {
+      color: #fff;
+    }
+
+    .about {
+      margin: 30px 0;
+      text-align: center;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    /* Discord card */
+    .discord-link {
+      text-decoration: none;
+      color: inherit;
+      display: inline-block;
+    }
+
+    .discord-card {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 15px 20px;
+      border-radius: 15px;
+      margin: 20px auto;
+      width: fit-content;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .discord-card:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 10px 30px rgba(88, 101, 242, 0.7);
+    }
+
+    .discord-card img {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      border: 2px solid #5865F2;
+    }
+
+    .discord-card h3 {
+      margin: 0;
+      font-size: 1.25rem;
+    }
+
+    .discord-card p {
+      margin: 2px 0;
+      opacity: 0.85;
+      font-size: 0.95rem;
+    }
+
+    .skills, .projects {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .skill-icons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .skill-icons img {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      transition: transform 0.2s;
+    }
+
+    .skill-icons img:hover {
+      transform: scale(1.1);
+    }
+
+    .project-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 12px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Profile -->
+    <div class="profile">
+      <img src="https://iili.io/KnBUB3b.png" alt="Profile Picture">
+      <h1>BigWhiteThing</h1>
+      <p>12yo certified dumbass · Cat lover :)</p>
+      <div class="links">
+        <a href="https://github.com/bigwhitething" target="_blank">Github</a> | 
+        <a href="https://discordapp.com/users/1174506245743452194" target="_blank">Discord</a>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div class="about">
+      <p>
+        Hi, I’m BigWhiteThing. I enjoy coding and I am currently learning front-end development.
+        Above are my Discord, skills, and projects. (Discord PFP may not load due to network restrictions.)
+      </p>
+    </div>
+
+    <!-- Discord Card -->
+    <a href="https://discordapp.com/users/1174506245743452194" target="_blank" class="discord-link">
+      <div class="discord-card" id="discord-card">
+        <img id="discord-avatar" src="" alt="Discord Avatar">
+        <div>
+          <h3 id="discord-username">Loading...</h3>
+          <p id="discord-status">Checking status...</p>
+          <p id="discord-activity"></p>
+          <p id="discord-session"></p>
+        </div>
+      </div>
+    </a>
+
+    <!-- Skills -->
+    <div class="skills">
+      <h2>Skills</h2>
+      <div class="skill-icons">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg" alt="Discord.js">
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="projects">
+      <h2>Projects</h2>
+      <div class="project-cards">
+        <div class="card">BigWhiteThing's Arcade 🎮</div>
+        <div class="card">Nothing</div>
+        <div class="card">Nothing</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const userId = "1174506245743452194"; 
+    const ws = new WebSocket("wss://api.lanyard.rest/socket");
+
+    let sessionTimer = null;
+    let sessionStart = localStorage.getItem("discordSessionStart") ? parseInt(localStorage.getItem("discordSessionStart"), 10) : null;
+
+    function startSessionTimer(status) {
+      if (sessionTimer) clearInterval(sessionTimer);
+
+      if (status !== "offline") {
+        if (!sessionStart) {
+          sessionStart = Date.now();
+          localStorage.setItem("discordSessionStart", sessionStart);
+        }
+        sessionTimer = setInterval(() => {
+          const elapsed = Math.floor((Date.now() - sessionStart) / 1000);
+          const h = Math.floor(elapsed / 3600);
+          const m = Math.floor((elapsed % 3600) / 60);
+          const s = elapsed % 60;
+          document.getElementById("discord-session").textContent =
+            `⏳ How long I Have Been On Discord: ${h}h ${m}m ${s}s`;
+        }, 1000);
+      } else {
+        sessionStart = null;
+        localStorage.removeItem("discordSessionStart");
+        document.getElementById("discord-session").textContent =
+          "⏳ Offline (no active session)";
+      }
+    }
+
+    ws.onopen = () => {
+      ws.send(JSON.stringify({
+        op: 2,
+        d: { subscribe_to_id: userId }
+      }));
+    };
+
+    ws.onmessage = (event) => {
+      const payload = JSON.parse(event.data);
+      if (payload.t !== "INIT_STATE" && payload.t !== "PRESENCE_UPDATE") return;
+
+      const d = payload.d;
+
+      // Avatar
+      if (d.discord_user.avatar) {
+        document.getElementById("discord-avatar").src =
+          `https://cdn.discordapp.com/avatars/${d.discord_user.id}/${d.discord_user.avatar}.png`;
+      } else {
+        document.getElementById("discord-avatar").src =
+          "https://cdn.discordapp.com/embed/avatars/0.png";
+      }
+
+      // Username
+      let tag = d.discord_user.discriminator === "0" ? "" : `#${d.discord_user.discriminator}`;
+      document.getElementById("discord-username").textContent =
+        `${d.discord_user.username}${tag}`;
+
+      // Status
+      const statusMap = {
+        online: "🟢 Online",
+        idle: "🌙 Idle",
+        dnd: "⛔ Do Not Disturb",
+        offline: "⚫ Offline"
+      };
+      document.getElementById("discord-status").textContent =
+        statusMap[d.discord_status] || "Unknown";
+
+      // Activity
+      let activityText = "";
+      if (d.listening_to_spotify) {
+        const start = d.spotify.timestamps.start;
+        activityText = `🎵 Listening to ${d.spotify.song} by ${d.spotify.artist}`;
+
+        setInterval(() => {
+          const elapsed = Math.floor((Date.now() - start) / 1000);
+          const m = Math.floor(elapsed / 60);
+          const s = elapsed % 60;
+          document.getElementById("discord-activity").textContent =
+            `🎵 Listening to ${d.spotify.song} by ${d.spotify.artist} (${m}m ${s}s)`;
+        }, 1000);
+      } else if (d.activities && d.activities.length > 0) {
+        const game = d.activities.find(a => a.type === 0);
+        if (game) activityText = `🎮 Playing ${game.name}`;
+      } else {
+        activityText = "No activity :(";
+      }
+      if (!d.listening_to_spotify) {
+        document.getElementById("discord-activity").textContent = activityText;
+      }
+
+      // Session timer
+      startSessionTimer(d.discord_status);
+    };
+  </script>
+</body>
+</html>
